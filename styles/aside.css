@@ -1,0 +1,119 @@
+aside{
+    display: grid;
+    grid-template-columns: auto;
+    background-image: linear-gradient(171.6deg, #3B4C78 0%, #1F0076 38.29%);
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+}
+
+aside #close-sidebar{
+    display: none;
+    position: absolute; 
+    width: 80px; 
+    height: 80px; 
+    top: 25px; 
+    right: -40px; 
+    border: none; 
+    text-align: left; 
+    border-radius: 50%; 
+    padding-right: 10px;
+}
+
+aside.sidebar .profile{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.2fr 0.2fr;
+    justify-content: center;
+    padding-top: 20px;
+    row-gap: 10px;
+}
+aside.sidebar .profile img{
+    width: 290px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+aside.sidebar .profile .info-icons{
+   display: grid;
+   grid-template-columns: 1fr auto;
+   grid-template-rows: auto;
+   column-gap: 10px;
+   justify-content: space-between;
+}
+
+aside.sidebar .profile .info h3{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+}
+aside.sidebar .profile .info h4{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+}
+aside.sidebar .profile .icons{
+    display: grid;
+    grid-template-columns: 0.2fr 0.2fr;
+    grid-template-rows: 0.2fr 0.2fr;
+    gap: 5px;
+    justify-items: center;
+}
+aside.sidebar .profile .icons a{
+    width: fit-content;
+    height: fit-content;
+}
+aside.sidebar .profile .icons a svg{
+    color: #ffffff;
+    width: 24px;
+    height: 24px;
+    transition: 0.3s;
+}
+aside.sidebar .profile .icons a:hover svg{ 
+    color: red;
+}
+aside.sidebar .navbar{
+    justify-self: left;
+}
+aside.sidebar > .navbar a{
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+aside.sidebar .navbar a:hover{
+    font-weight: 600;
+    font-size: 24px;
+}
+aside.sidebar h4{
+    align-self: end;
+    font-family: 'Raleway', sans-serif;
+}
+aside.sidebar h4{
+    color: white;
+}
+aside.sidebar h4 svg:hover{
+    color: red;
+}
+
+@media screen and (max-width:767px){
+    aside{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        z-index: 999;
+        transition: 0.3s;
+    }
+    aside.open{
+        left: 0;
+    }
+    aside.open #close-sidebar{
+        display: block;
+    }
+}

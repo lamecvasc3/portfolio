@@ -1,0 +1,29 @@
+::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1F0076;
+}
+
+::-webkit-scrollbar-track {
+    background: #dedede;
+} 
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+main{
+    display: grid; 
+    grid-template-rows: 100vh;
+    grid-template-columns: 400px 2fr;
+}
+
+@media screen and (max-width:767px){
+    main{
+        grid-template-columns: 1fr;
+    }
+}
